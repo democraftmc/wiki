@@ -2,17 +2,26 @@
 import { getCollection, getEntry } from "astro:content";
 import DocsLayout from "../layouts/docs.astro";
 
+// [...slug].astro
 export async function getStaticPaths() {
   const docs = await getCollection("wiki");
-  // Filter out docs where data.draft is true
-  const publishedDocs = docs.filter((doc) => !doc.data.draft);
-  return publishedDocs.map((doc) => ({
-    params: { slug: doc.slug },
-  }));
+  const published = docs.filter(d => !d.data.draft);
+
+  return published.map(doc => {
+    // split nested slugs into an array
+    const slugSegments = doc.slug.split("/");
+    return { params: { slug: slugSegments } };
+  });
 }
 
-const { slug } = Astro.params;
-const doc = await getEntry("wiki", slug);
+// [...slug].astro (top of file)
+const rawSlug = Astro.params.slug;
+// ensure slug is always an array
+const slugArray = Array.isArray(rawSlug) ? rawSlug : [rawSlug];
+const slugPath = slugArray.join("/");
+
+const doc = await getEntry("wiki", slugPath);
+
 
 if (!doc) {
   throw new Error("Page not found");
