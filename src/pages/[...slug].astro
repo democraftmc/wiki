@@ -5,41 +5,18 @@ import DocsLayout from "../layouts/docs.astro";
 // [...slug].astro
 export async function getStaticPaths() {
   const docs = await getCollection("wiki");
-  const published = docs.filter(d => !d.data.draft);
-
-  return published.map(doc => {
-    // split nested slugs into an array
-    const slugSegments = doc.slug.split("/");
-    return { params: { slug: slugSegments } };
-  });
+  const publishedDocs = docs.filter((doc) => !doc.data.draft).filter((doc) => !doc.slug.includes('__'));
+  return publishedDocs.map((doc) => ({
+    params: { slug: doc.slug, title: doc.data.title },
+    props: { doc, html: doc.body },
+  }));
 }
 
-// [...slug].astro (top of file)
-const rawSlug = Astro.params.slug;
-// ensure slug is always an array
-const slugArray = Array.isArray(rawSlug) ? rawSlug : [rawSlug];
-const slugPath = slugArray.join("/");
-
-const doc = await getEntry("wiki", slugPath);
-
-
-if (!doc) {
-  throw new Error("Page not found");
-}
-
-// Optional: You might also want to check if the doc is a draft here
-// in case someone accesses it directly by URL
-if (doc.data.draft) {
-  return new Response(null, {
-    status: 404,
-    statusText: "Not found"
-  });
-}
-
-const { Content } = await doc.render();
+const { doc, html } = Astro.props;
+//console.log("html:", html);
 ---
 
 <DocsLayout>
   <h1>{doc.data.title}</h1>
-  <Content />
+  <div set:html={html} />
 </DocsLayout>
