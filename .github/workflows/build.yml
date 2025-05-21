@@ -1,0 +1,45 @@
+name: 📦 Deploy to GitHub Pages
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  # Using a different branch name? Replace `main` with your branch’s name
+  push:
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Extract commit information
+        run: |
+          echo "VITE_GIT_BRANCH=${GITHUB_REF#refs/heads/}" >> .env
+          echo "VITE_GIT_COMMIT_HASH=$(git rev-parse --short HEAD)" >> .env
+          echo "VITE_GIT_COMMIT_MESSAGE=$(git log -1 --pretty=%s)" >> .env
+          echo "VITE_GIT_COMMIT_AUTHOR=$(git log -1 --pretty=%an)" >> .env
+        shell: bash
+      - name: Install, build, and upload your site output
+        uses: withastro/action@v4
+        with:
+            package-manager: npm@latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
