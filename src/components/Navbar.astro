@@ -7,11 +7,20 @@ import { Icon } from "astro-icon/components";
        <Icon name="lucide:menu" class="h-10 w-10 px-2 fill-current" />
     </label>
     <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/logo.png" alt="Logo DEMOCRAFT" class="h-7 w-7 ml-3 rounded" />
-    <a class="text-xl ml-3">
+    <a class="hidden md:flex text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2">
       DEMOCRAFT
-      <span class="badge badge-error">WIKI</span>
+      <span class="badge badge-error">WIKI<Icon name="lucide:pencil-ruler" /></span>
     </a>
   </div>
+
+  <a class="navbar-center flex md:hidden text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2">
+    DEMOCRAFT
+    <span class="badge badge-error">
+      WIKI
+      <Icon name="lucide:pencil-ruler" />
+    </span>
+  </a>
+
   <div class="navbar-end">
 
     <label class="hidden sm:input">
@@ -19,10 +28,9 @@ import { Icon } from "astro-icon/components";
       <input type="search" class="grow" placeholder="Search" />
     </label>
 
-    <label class="swap swap-rotate">
-      <input type="checkbox" class="theme-controller" value="light" />
-      <Icon name="lucide:sun" class="swap-off input input-bordered h-10 w-10 px-2 mx-2 fill-current" />
-      <Icon name="lucide:moon" class="swap-on input input-bordered h-10 w-10 px-2 mx-2 fill-current" />
-    </label>
+    <button data-toggle-theme="dark,light" data-act-class="">
+      <Icon name="lucide:sun" class="hidden dark:block input input-bordered h-10 w-10 px-2 mx-2 fill-current" />
+      <Icon name="lucide:moon" class="block dark:hidden input input-bordered h-10 w-10 px-2 mx-2 fill-current" />
+    </button>
   </div>
 </div>

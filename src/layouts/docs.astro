@@ -11,9 +11,7 @@ const sanitizedPath = currentPath.substring(1).replace(/\/$/, ""); // Remove tra
 const { post } = Astro.props;
 ---
 
-<html
-  lang="fr"
->
+<html lang="fr">
   <Head title={post?.data?.title ?? "Page introuvable"} description={post?.data?.description ?? ""} />
   <body class="bg-base-100 max-h-screen h-screen">
     <Navbar />
