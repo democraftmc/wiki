@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import DocsLayout from "../layouts/docs.astro";
 
 // [...slug].astro
@@ -13,10 +13,13 @@ export async function getStaticPaths() {
 }
 
 const { doc } = Astro.props;
-//console.log("html:", html);
+if (!doc) {
+  throw new Error('Could not find blog post 1');
+}
+const { Content, headings } = await render(doc);
 ---
 
-<DocsLayout post={doc}>
+<DocsLayout post={doc} headings={headings}>
   <h1>{doc.data.title}</h1>
-  <div set:html={doc.render()} />
+  <Content />
 </DocsLayout>
