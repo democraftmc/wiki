@@ -2,6 +2,7 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;
+  exclude: scrollbar;
 }
 
 
@@ -10,7 +11,9 @@ img {
 }
 
 .prose {
-  content: none;
+  :where(blockquote p:first-of-type):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
+    content: none !important;
+  }
 }
 
 /* 
@@ -28,7 +31,7 @@ img {
   position: relative;
   font-weight: 500;
   font-style: normal;
-  color: var(--tw-prose-quotes);
+  color: var(--color-base-content);
   border-inline-start-width: 0;
   quotes: "\201C" "\201D" "\2018" "\2019";
   padding: 1.3rem 1rem 0.2rem 1rem;
@@ -49,7 +52,6 @@ img {
   font-weight: bold;
   font-size: 1.1rem;
   border-radius: 4px;
-  color: var(--label-color, #333);
 }
 
 /* Then for each callout, set a background SVG icon */
