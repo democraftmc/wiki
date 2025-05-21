@@ -5,16 +5,18 @@
   exclude: scrollbar;
 }
 
-
-img {
-  border-radius: 1rem;
-}
-
 .prose {
   :where(blockquote p:first-of-type):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
     content: none !important;
   }
 }
+
+.prose {
+  img {
+    border-radius: 1rem;
+  }
+}
+
 
 /* 
   * Custom Callout Styles

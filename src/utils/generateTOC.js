@@ -26,19 +26,17 @@ export function generateTOC(items) {
     // H1 items (level 1)
     if (level === 1) {
       const childrenHtml = hasChildren
-        ? `<ul class="pl-4">
-${Object.values(node.children).map(c => render(c, 2)).join('')}
-</ul>`
+        ? Object.values(node.children).map(c => render(c, 2)).join('')
         : '';
-      return `  <li class="mb-2">
-    <h2 class="menu-title text-lg">${node.title}</h2>
+      return `  <li class="">
+    <h2 class="menu-title text-lg mt-4" style="padding-inline: 0.25rem !important;">${node.title}</h2>
     ${childrenHtml}
   </li>`;
     }
 
     // Levels 2+ use details dropdown
     const childrenList = hasChildren
-      ? `<ul class="pl-4 mt-1">
+      ? `<ul class="pl-2 mt-1">
 ${Object.values(node.children).map(c => render(c, level + 1)).join('')}
 </ul>`
       : '';
