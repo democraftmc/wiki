@@ -1,5 +1,3 @@
-// src/utils/generateTOC.js
-// Generates a nested TOC with Tailwind & daisyUI styling
 export function generateTOC(items) {
   // Build a nested tree
   const root = { title: null, children: {} };
