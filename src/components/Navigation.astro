@@ -4,12 +4,15 @@ import { getCollection } from "astro:content";
 
 const docs = await getCollection("wiki");
 docs.sort((a, b) => a.data.weight - b.data.weight);
-const publishedDocs = docs.filter((doc) => !doc.data.draft).map((doc) => ({
-  params: { 
-    title: doc.data.title,
-    slug: doc.slug 
-  },
-}));
+const publishedDocs = docs
+  .filter((doc) => !doc.data.draft)
+  .filter((doc) => !doc.slug.includes('__'))
+  .map((doc) => ({
+    params: { 
+      title: doc.data.title,
+      slug: doc.slug 
+    },
+  }));
 
 const content = generateTOC(publishedDocs)
 ---
@@ -20,6 +23,6 @@ const content = generateTOC(publishedDocs)
   </div>
   <div class="drawer-side">
     <label for="navbar-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu bg-base-100 border-r-2 border-base-300 text-base-content min-h-full w-64 p-4" set:html={content} />
+    <ul class="menu lg:menu-sm bg-base-100 border-r-2 border-base-300 text-base-content min-h-full w-64 p-4 pb-20" set:html={content} />
   </div>
 </div>
