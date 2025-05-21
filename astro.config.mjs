@@ -14,7 +14,8 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://wiki.democraft.fr',
+  site: 'https://democraft.studios',
+  base: '/wiki',
   integrations: [icon(), mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
