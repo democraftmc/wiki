@@ -8,15 +8,15 @@ export async function getStaticPaths() {
   const publishedDocs = docs.filter((doc) => !doc.data.draft).filter((doc) => !doc.slug.includes('__'));
   return publishedDocs.map((doc) => ({
     params: { slug: doc.slug, title: doc.data.title },
-    props: { doc, html: doc.render() },
+    props: { doc },
   }));
 }
 
-const { doc, html } = Astro.props;
+const { doc } = Astro.props;
 //console.log("html:", html);
 ---
 
 <DocsLayout post={doc}>
   <h1>{doc.data.title}</h1>
-  <div set:html={html} />
+  <div set:html={doc.render()} />
 </DocsLayout>
