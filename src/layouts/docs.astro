@@ -8,7 +8,7 @@ import Navigation from '../components/Navigation.astro'
 // Extract current category from URL path
 const currentPath = Astro.url.pathname;
 const sanitizedPath = currentPath.substring(1).replace(/\/$/, ""); // Remove trailing slash
-const post = await getEntry('wiki', sanitizedPath);
+const { post } = Astro.props;
 ---
 
 <html
