@@ -4,6 +4,15 @@
   themes: light --default, dark --prefersdark;
 }
 
+
+img {
+  border-radius: 1rem;
+}
+
+.prose {
+  content: none;
+}
+
 /* 
   * Custom Callout Styles
   * 
@@ -14,10 +23,6 @@
 
   * (C) 2020-2025 Funasitien DreamCloud
 */
-
-img {
-  border-radius: 1rem;
-}
 
 .callout {
   position: relative;

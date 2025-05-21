@@ -17,10 +17,7 @@ Effectuez un clic droit dans le vide. Le menu suivant s'ouvrira :
 
 ## 🪶 DEMOPHONE V2
 
-{{% alert context="warning" %}}
-**ATTENTION !**
-
-La nouvelle version du DEMOPHONE est actuellement en développement. Elle n'est pas disponible pour tout le monde et sur tout les serveurs
-{{% /alert %}}
+> [!warning]
+> La nouvelle version du DEMOPHONE est actuellement en développement. Elle n'est pas disponible pour tout le monde et sur tout les serveurs
 
 [^1]: Disponible sur les autres serveurs dans la V2

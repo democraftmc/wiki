@@ -32,8 +32,7 @@ icon: balance
 ## 📚 Informations complémentaires
 Vous devez respecter les Conditions d’utilisation de Discord et celles de Minecraft.
 
-{{% alert context="danger" %}}
-**Rappel :** ces règles ne sont en aucun cas définitives ni exhaustives, et doivent être respectées par tous. Nous considérons que vous les avez acceptées en rejoignant le serveur.
-{{% /alert %}}
+> [!danger]
+> **Rappel :** ces règles ne sont en aucun cas définitives ni exhaustives, et doivent être respectées par tous. Nous considérons que vous les avez acceptées en rejoignant le serveur.
 
 > Règlement réalisé par Funasitien et Fantaisiici.

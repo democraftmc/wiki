@@ -14,9 +14,8 @@ Vous êtes sur le point de lire notre **licence**, document qui définit les rè
 
 Cette licence s'applique, au moment de sa dernière mise à jour, à **DEMOCRAFT STUDIOS** et ses possessions : Wyntaria, Hetonia, Diamond Wars
 
-{{% alert context="warning" %}}
-Tout projet qui possède sa propre licence active n'est pas concerné par ce document (Exemple : Default Server sur notre GitHub)
-{{% /alert %}}
+> [!warning]
+> Tout projet qui possède sa propre licence active n'est pas concerné par ce document (Exemple : Default Server sur notre GitHub)
 
 ## ✒️ Droit d'auteur
 
@@ -42,10 +41,9 @@ Cependant, le code de nos concepts, Mini Jeux, serveurs et site web est notre pr
 
 Tous nos dessins (assets) que nous n'avons pas achetés à des tiers nous appartiennent. Vous ne pouvez donc pas les utiliser, mais nous ne pouvons pas vous empêcher de vous en inspirer, comme par exemple de créer vos propres avatars dans le style de DEMOCRAFT.
 
-{{% alert context="danger" %}}
-**Attention aux anciens projets !**
-Ils ne sont pas tombés sous le droit commun ! Pour Wyntaria par exemple, la marque, le code et les assets (principalement GUI) nous appartiennent toujours (à Benkuro11) et **ne peuvent donc pas être réutilisés, sauf avec son accord.**
-{{% /alert %}}
+> [!danger]
+> **Attention aux anciens projets !**
+> Ils ne sont pas tombés sous le droit commun ! Pour Wyntaria par exemple, la marque, le code et les assets (principalement GUI) nous appartiennent toujours (à Benkuro11) et **ne peuvent donc pas être réutilisés, sauf avec son accord.**
 
 ## 🖨️ Copyright
 

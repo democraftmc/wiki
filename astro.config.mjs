@@ -5,8 +5,11 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 
-// Things
+// Markdown
+import remarkObsidian from 'remark-obsidian';
 import mdx from '@astrojs/mdx';
+
+// Site Managment
 import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
@@ -15,5 +18,15 @@ export default defineConfig({
   integrations: [icon(), mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
+  },
+  markdown: {
+      syntaxHighlight: {
+        type: 'shiki',
+        excludeLangs: ['mermaid', 'math'],
+      },
+    remarkPlugins: [remarkObsidian],
+  },
+  experimental: {
+    headingIdCompat: true,
   }
 });

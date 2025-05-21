@@ -2,11 +2,11 @@
 title: 🔴 Switch
 weight: 19
 ---
-{{% alert icon="🪄" context="primary" %}}
-**REJOIGNEZ DEMOCRAFT EN UN CLIC !**
 
-DEMOCRAFT est maintenant compatible avec le [lien magique](../magik/), qui vous permet de rejoindre DEMOCRAFT sans aucune modification sur votre console !
-{{% /alert %}}
+> [!info]
+> **REJOIGNEZ DEMOCRAFT EN UN CLIC !**
+> 
+> DEMOCRAFT est maintenant compatible avec le [lien magique](../magik/), qui vous permet de rejoindre DEMOCRAFT sans aucune modification sur votre console !
 
 ### **Se connecter sur Switch**
 
