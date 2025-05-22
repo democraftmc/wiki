@@ -13,13 +13,15 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap'
 import pagefind from "astro-pagefind";
 
+import fuse from 'astro-fuse';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://wiki.democraft.fr',
   build: {
     format: "file",
   },
-  integrations: [icon(), mdx(), sitemap(), pagefind()],
+  integrations: [icon(), mdx(), sitemap(), pagefind(), fuse()],
   vite: {
     plugins: [tailwindcss()],
   },

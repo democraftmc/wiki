@@ -26,7 +26,7 @@ import Search from "astro-pagefind/components/Search";
 
     <label class="hidden sm:input">
       <Icon name="lucide:search" class="h-[1em] opacity-50"/>
-      <input type="search" class="grow" placeholder="Search" />
+      <input id="search_input" type="search" class="grow" placeholder="Search" />
     </label>
 
     <button onclick="search_modal.showModal()">
@@ -43,7 +43,13 @@ import Search from "astro-pagefind/components/Search";
 <dialog id="search_modal" class="modal">
   <div class="modal-box max-h-[45rem]">
     <div class="flex flex-row gap-2 items-center justify-center">
-      <Search />
+      
+      <label class="hidden sm:input">
+        <Icon name="lucide:search" class="h-[1em] opacity-50"/>
+        <input data-search-inp id="search_input" type="search" class="grow" placeholder="Search" />
+      </label>
+
+      <ul data-search-result></ul>
       <form method="dialog">
         <button class="btn btn-soft btn-error py-6 px-3 rounded-lg border-2 border-error">
           <Icon name="lucide:circle-x" class="h-6 w-6 fill-current" />
@@ -55,3 +61,52 @@ import Search from "astro-pagefind/components/Search";
     <button>close</button>
   </form>
 </dialog>
+
+<script is:inline>
+const search_input = document.getElementById('search_input');
+const search_modal = document.getElementById('search_modal');
+
+search_input.addEventListener('click', () => {
+  search_modal.showModal();
+});
+</script>
+
+
+<script>
+  import type { OutputBaseSearchable } from 'astro-fuse'
+
+  class CustomSearch extends HTMLElement {
+    list = this.querySelector<HTMLUListElement>('[data-search-result]')
+
+    constructor() {
+      super()
+
+      this.querySelector<HTMLInputElement>(
+        '[data-search-inp]'
+      )?.addEventListener('input', this.onInput.bind(this))
+    }
+
+    async onInput(e: Event) {
+      const { list } = this
+
+      if (!list) {
+        return
+      }
+
+      // create fuse instance from index
+      const { loadFuse } = await import('astro-fuse/client')
+      const fuse = await loadFuse()
+
+      const results = fuse.search<OutputBaseSearchable>((e.target as HTMLInputElement).value.trim())
+
+      list.innerHTML = results
+        .map(
+          ({ item }) =>
+            `<li><a href="${item.pathname}">${item.frontmatter.title}</a></li>`
+        )
+        .join('')
+    }
+  }
+
+  customElements.define('custom-search', CustomSearch)
+</script>
