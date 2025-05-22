@@ -2,19 +2,33 @@
 import { Icon } from "astro-icon/components";
 import Search from "astro-pagefind/components/Search";
 ---
+
 <div class="fixed z-100 navbar bg-base-100 border-b-2 border-base-300">
   <div class="navbar-start">
-    <label for="nav-drawer" class="md:hidden btn btn-soft btn-error px-1 drawer-button">
-       <Icon name="lucide:menu" class="h-10 w-10 px-2 fill-current" />
+    <label
+      for="nav-drawer"
+      class="md:hidden btn btn-soft btn-error px-1 drawer-button"
+    >
+      <Icon name="lucide:menu" class="h-10 w-10 px-2 fill-current" />
     </label>
-    <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/logo.png" alt="Logo DEMOCRAFT" class="h-7 w-7 ml-3 rounded" />
-    <a class="hidden md:flex text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2">
+    <img
+      src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/logo.png"
+      alt="Logo DEMOCRAFT"
+      class="h-7 w-7 ml-3 rounded"
+    />
+    <a
+      class="hidden md:flex text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2"
+    >
       DEMOCRAFT
-      <span class="badge badge-error">WIKI<Icon name="lucide:pencil-ruler" /></span>
+      <span class="badge badge-error"
+        >WIKI<Icon name="lucide:pencil-ruler" /></span
+      >
     </a>
   </div>
 
-  <a class="navbar-center flex md:hidden text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2">
+  <a
+    class="navbar-center flex md:hidden text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2"
+  >
     DEMOCRAFT
     <span class="badge badge-error">
       WIKI
@@ -24,34 +38,35 @@ import Search from "astro-pagefind/components/Search";
 
   <div class="navbar-end">
 
-    <label class="hidden sm:input">
-      <Icon name="lucide:search" class="h-[1em] opacity-50"/>
-      <input id="search_input" type="search" class="grow" placeholder="Search" />
-    </label>
-
     <button onclick="search_modal.showModal()">
-      <Icon name="lucide:search" class="input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 fill-current" />
+      <Icon
+        name="lucide:search"
+        class="input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 fill-current"
+      />
     </button>
 
     <button data-toggle-theme="dark,light" data-act-class="light">
-      <Icon name="lucide:sun" class="hidden dark:block input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current" />
-      <Icon name="lucide:moon" class="block dark:hidden input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current" />
+      <Icon
+        name="lucide:sun"
+        class="hidden dark:block input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
+      />
+      <Icon
+        name="lucide:moon"
+        class="block dark:hidden input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
+      />
     </button>
   </div>
 </div>
 
 <dialog id="search_modal" class="modal">
   <div class="modal-box max-h-[45rem]">
-    <div class="flex flex-row gap-2 items-center justify-center">
-      
-      <label class="input">
-        <Icon name="lucide:search" class="h-[1em] opacity-50"/>
-        <input data-search-inp id="search_input" type="search" class="grow" placeholder="Search" />
-      </label>
+    <Search id="search_input" uiOptions={{ showImages: false }}  />
 
-      <ul data-search-result></ul>
+    <div class="modal-action">
       <form method="dialog">
-        <button class="btn btn-soft btn-error py-6 px-3 rounded-lg border-2 border-error">
+        <button
+          class="btn btn-soft btn-error py-6 px-3 rounded-lg border-2 border-error"
+        >
           <Icon name="lucide:circle-x" class="h-6 w-6 fill-current" />
         </button>
       </form>
@@ -62,51 +77,11 @@ import Search from "astro-pagefind/components/Search";
   </form>
 </dialog>
 
-<script is:inline>
-const search_input = document.getElementById('search_input');
-const search_modal = document.getElementById('search_modal');
-
-search_input.addEventListener('click', () => {
-  search_modal.showModal();
-});
-</script>
-
-
-<script>
-  import type { OutputBaseSearchable } from 'astro-fuse'
-
-  class CustomSearch extends HTMLElement {
-    list = this.querySelector<HTMLUListElement>('[data-search-result]')
-
-    constructor() {
-      super()
-
-      this.querySelector<HTMLInputElement>(
-        '[data-search-inp]'
-      )?.addEventListener('input', this.onInput.bind(this))
-    }
-
-    async onInput(e: Event) {
-      const { list } = this
-
-      if (!list) {
-        return
-      }
-
-      // create fuse instance from index
-      const { loadFuse } = await import('astro-fuse/client')
-      const fuse = await loadFuse()
-
-      const results = fuse.search<OutputBaseSearchable>((e.target as HTMLInputElement).value.trim())
-
-      list.innerHTML = results
-        .map(
-          ({ item }) =>
-            `<li><a href="${item.pathname}">${item.frontmatter.title}</a></li>`
-        )
-        .join('')
-    }
-  }
-
-  customElements.define('custom-search', CustomSearch)
+<script type="module" is:inline>
+  window.addEventListener('keydown', e =>
+    e.ctrlKey && e.key.toLowerCase() === 'k' && (
+      e.preventDefault(),
+      document.getElementById('search_modal')?.showModal()
+    )
+  );
 </script>

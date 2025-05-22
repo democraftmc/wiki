@@ -19,10 +19,10 @@ const content = generateTOC(publishedDocs)
 
 <div class="drawer lg:drawer-open">
   <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content">
+  <div data-pagefind-body class="drawer-content">
     <slot />
   </div>
-  <div class="drawer-side pt-11">
+  <div class="drawer-side pt-11" id="navigation">
     <label for="nav-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu lg:menu-sm bg-base-100 border-r-2 border-base-300 text-base-content min-h-full w-78 md:w-64 p-4 pb-20 overflow-y-auto" set:html={content}></ul>
   </div>

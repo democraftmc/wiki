@@ -1,5 +1,5 @@
 ---
-title: ❔ C'est quoi le lobby ?
+title: 🌇 C'est quoi le lobby ?
 weight: 31
 ---
 
