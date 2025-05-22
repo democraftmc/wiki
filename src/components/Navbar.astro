@@ -28,9 +28,13 @@ import { Icon } from "astro-icon/components";
       <input type="search" class="grow" placeholder="Search" />
     </label>
 
-    <button data-toggle-theme="dark,light" data-act-class="">
-      <Icon name="lucide:sun" class="hidden dark:block input input-bordered h-10 w-10 px-2 mx-2 fill-current" />
-      <Icon name="lucide:moon" class="block dark:hidden input input-bordered h-10 w-10 px-2 mx-2 fill-current" />
+    <button>
+      <Icon name="lucide:search" class="input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current" />
+    </button>
+
+    <button data-toggle-theme="dark,light" data-act-class="light">
+      <Icon name="lucide:sun" class="hidden dark:block input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current" />
+      <Icon name="lucide:moon" class="block dark:hidden input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current" />
     </button>
   </div>
 </div>
