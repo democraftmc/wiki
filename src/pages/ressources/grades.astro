@@ -1,0 +1,235 @@
+---
+import Layout from "../../layouts/default.astro"
+
+import Navbar from "../../components/Navbar.astro"
+import Navigation from "../../components/Navigation.astro"
+
+import { Icon } from "astro-icon/components";
+import "../../assets/app.css";
+---
+
+<Layout title="🏷️ Comparatif des grades" description="Comparatif des grades (et leurs permissions respectives) de DEMOCRAFT">
+	<Navbar />
+	<Navigation>
+    <div class="flex mx-auto items-center justify-center py-24">
+        <div class="overflow-x-none rounded-box">
+            <table class="table place-content-center">
+                <!-- head -->
+                <thead class="">
+                <tr>
+                    <th></th>
+                    <th>
+                        <img alt="Grade Joueur" class="hidden md:block h-10 w-auto" src="/images/grades/joueur.png" />
+                        <img alt="Grade Joueur" class="md:hidden h-6 w-auto" src="/images/mini/joueur.png" />
+                    </th>
+                    <th>
+                        <img alt="Grade DEMO-MINI" class="hidden md:block h-10 w-auto" src="/images/grades/mini.png" />
+                        <img alt="Grade DEMO-MINI" class="md:hidden h-6 w-auto" src="/images/mini/mini.png" />
+                    </th>
+                    <th>
+                        <img alt="Grade DEMO" class="hidden md:block h-10 w-auto" src="/images/grades/demo.png" />
+                        <img alt="Grade DEMO" class="md:hidden h-6 w-auto" src="/images/mini/demo.png" />
+                    </th>
+                    <th>
+                        <img alt="Grade DEMO-PLUS" class="hidden md:block h-10 w-auto" src="/images/grades/plus.png" />
+                        <img alt="Grade DEMO-PLUS" class="md:hidden h-6 w-auto" src="/images/mini/plus.png" />
+                    </th>
+                    <th>
+                        <img alt="Grade DEMO-MAX" class="hidden md:block h-10 w-auto" src="/images/grades/max.png" />
+                        <img alt="Grade DEMO-MAX" class="md:hidden h-6 w-auto" src="/images/mini/max.png" />
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>Peut rejoindre DEMOCRAFT</th>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Groupes</th>
+                    <td>
+                       <div class="flex justify-center">3 Joueurs</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">5 Joueurs</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">8 Joueurs</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">10 Joueurs</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:infinity" class="w-6 h-6"/></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Changement de Skin</th>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-x" class="w-6 h-6 text-error" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-x" class="w-6 h-6 text-error" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>/fly dans le Hub</th>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-x" class="w-6 h-6 text-error" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-x" class="w-6 h-6 text-error" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Kit Hebdomadaire<a class="hidden">¹</a></th>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-x" class="w-6 h-6 text-error" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div>
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-check" class="w-6 h-6 text-success" /></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Rôle discord</th>
+                    <td>
+                       <div class="flex justify-center">Aucun</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">
+                        <span class="badge badge-error">
+                            MINI
+                        </span>
+                    </div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">
+                        <span class="badge badge-error">
+                            DEMO
+                        </span>
+                    </div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">
+                        <span class="badge badge-warning">
+                            PLUS
+                        </span>
+                    </div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">
+                        <span class="badge badge-info">
+                            MAX
+                        </span>
+                    </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Homes</th>
+                    <td>
+                       <div class="flex justify-center">3</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">6</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">10</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">15</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:infinity" class="w-6 h-6"/></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="flex items-center gap-2">
+                            Cooldown RTP
+                            <span class="badge badge-success badge-xs gap-1">
+                                <Icon name="lucide:leaf" />
+                                SURVIE
+                            </span>
+                        </div>
+                    </th>
+                    <td>
+                       <div class="flex justify-center">1H</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">1H</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">1H</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">45min</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">30min</div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Pièces Bonus</th>
+                    <td>
+                       <div class="flex justify-center"><Icon name="lucide:circle-x" class="w-6 h-6 text-error" /></div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">1.000</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">2.500</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">7.500</div> 
+                    </td>
+                    <td>
+                       <div class="flex justify-center">15.000</div> 
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+    </div>
+    </Navigation>
+</Layout>

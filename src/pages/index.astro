@@ -3,18 +3,29 @@ import Layout from "../layouts/default.astro"
 
 import Navbar from "../components/Navbar.astro"
 import Navigation from "../components/Navigation.astro"
+
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout>
 	<Navbar />
 	<Navigation>
-		<div class="flex flex-col items-center justify-center h-screen">
-			<img class="h-96 w-auto rounded-lg" src="/images/lobby/0.png" />
-			<h1 class="text-4xl font-bold flex items-center gap-2">Welcome to the DEMOCRAFT Wiki
-				<span class="badge badge-warning">WIP</span>
-			</h1>
-			<p class="mt-4 text-lg">Explore our documentation and resources.</p>
-			<a href="/wiki" class="btn btn-primary mt-6">Get Started</a>
+		<div class="flex flex-col items-center justify-center pt-20">
+			<img src="/images/lobby/0.png" alt="Lobby DEMOCRAFT" class="rounded-lg shadow-lg w-auto h-64 object-cover mb-4" />
+			<h1 class="text-3xl font-bold font-[Minecraft_Five]">✨ Bienvenue sur DEMOCRAFT !</h1> 
+
+			<p>Merci beaucoup d'avoir rejoint notre serveur ! Depuis deux ans, nous avons beaucoup construit, reconstruit, codé et modifié - pour vous offrir un serveur propre et complet !</p>
+			<p>Mais qui dit modification dit question : qu'avez-vous modifié, et surtout, **comment ça marche ?**</p>
+			<p>A travers ce wiki, vous allez pouvoir en apprendre plus sur DEMOCRAFT, ses modes de jeux, ses mondes, blocs et objets inédits !</p>
+			<span class="badge badge-warning my-4 font-[Minecraft_Five]">
+				<Icon name="lucide:file-warning" />
+				WORK IN PROGRESS
+			</span>
+			<div class="flex gap-4 mt-4">
+				<a class="btn btn-soft btn-primary rounded-full" href="/welcome/connexion/version">Se Connecter</a>
+				<a class="btn btn-soft btn-secondary rounded-full" href="/welcome/lobby">Visiter le Lobby</a>
+				<a class="btn btn-soft btn-success rounded-full" href="/ressources/grades">Comparatif des grades</a>
+			</div>
 		</div>
 	</Navigation>
 </Layout>

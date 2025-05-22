@@ -51,7 +51,7 @@ ${childrenList}
     }
 
     // Leaf nodes
-    return `<li class="mt-1"><a class="hover:underline" href="/${node.slug}">${node.title}</a></li>`;
+    return `<li class="mt-1"><a class="hover:underline" title="${node.title}" href="/${node.slug}">${node.title}</a></li>`;
   }
 
   return render(root, 0);
