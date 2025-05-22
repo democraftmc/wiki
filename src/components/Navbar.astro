@@ -37,7 +37,6 @@ import Search from "astro-pagefind/components/Search";
   </a>
 
   <div class="navbar-end">
-
     <button onclick="search_modal.showModal()">
       <Icon
         name="lucide:search"
@@ -45,22 +44,23 @@ import Search from "astro-pagefind/components/Search";
       />
     </button>
 
-    <button data-toggle-theme="dark,light" data-act-class="light">
+    <label class="swap swap-rotate">
+      <input type="checkbox" id="theme_switcher"/>
       <Icon
         name="lucide:sun"
-        class="hidden dark:block input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
+        class="swap-on input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
       />
       <Icon
         name="lucide:moon"
-        class="block dark:hidden input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
+        class="swap-off input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
       />
-    </button>
+    </label>
   </div>
 </div>
 
 <dialog id="search_modal" class="modal">
   <div class="modal-box max-h-[45rem]">
-    <Search id="search_input" uiOptions={{ showImages: false }}  />
+    <Search id="search_input" uiOptions={{ showImages: false }} />
 
     <div class="modal-action">
       <form method="dialog">
@@ -78,10 +78,24 @@ import Search from "astro-pagefind/components/Search";
 </dialog>
 
 <script type="module" is:inline>
-  window.addEventListener('keydown', e =>
-    e.ctrlKey && e.key.toLowerCase() === 'k' && (
-      e.preventDefault(),
-      document.getElementById('search_modal')?.showModal()
-    )
+  
+  if (localStorage.getItem("theme") === "dark") {
+    document.getElementById("theme_switcher").checked = true;
+  }
+
+  window.addEventListener(
+    "keydown",
+    (e) =>
+      e.ctrlKey &&
+      e.key.toLowerCase() === "k" &&
+      (e.preventDefault(),
+      document.getElementById("search_modal")?.showModal()),
   );
+  document
+    .getElementById("theme_switcher")
+    ?.addEventListener("change", (e) => {
+      const theme = e.target.checked ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    });
 </script>
