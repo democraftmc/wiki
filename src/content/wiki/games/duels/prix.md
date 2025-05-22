@@ -1,4 +1,4 @@
 ---
-title: 💸 Prix
+title: 💸 Paris
 weight: 234
 ---
