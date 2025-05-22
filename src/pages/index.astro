@@ -7,5 +7,14 @@ import Navigation from "../components/Navigation.astro"
 
 <Layout>
 	<Navbar />
-	<Navigation />
+	<Navigation>
+		<div class="flex flex-col items-center justify-center h-screen">
+			<img class="h-96 w-auto rounded-lg" src="/images/lobby/0.png" />
+			<h1 class="text-4xl font-bold flex items-center gap-2">Welcome to the DEMOCRAFT Wiki
+				<span class="badge badge-warning">WIP</span>
+			</h1>
+			<p class="mt-4 text-lg">Explore our documentation and resources.</p>
+			<a href="/wiki" class="btn btn-primary mt-6">Get Started</a>
+		</div>
+	</Navigation>
 </Layout>
