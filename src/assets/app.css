@@ -23,9 +23,16 @@
   --default-font-family: "Satoshi" !important;
 }
 
-.pagefind-ui {
-  font-family: var(--default-font-family) !important;
-}
+
+  .pagefind-ui {
+    --pagefind-ui-scale: 0.75;
+    --pagefind-ui-primary: var(--color-primary);
+    --pagefind-ui-text: var(--base-content);
+    --pagefind-ui-border: #0000;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 0.25rem;
+    --pagefind-ui-font: var(--default-font-family);
+  }
 
 
 /* Satoshi font */
