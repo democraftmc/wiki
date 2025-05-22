@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import Search from "astro-pagefind/components/Search";
 ---
 <div class="fixed z-100 navbar bg-base-100 border-b-2 border-base-300">
   <div class="navbar-start">
@@ -28,8 +29,8 @@ import { Icon } from "astro-icon/components";
       <input type="search" class="grow" placeholder="Search" />
     </label>
 
-    <button>
-      <Icon name="lucide:search" class="md:hidden input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 fill-current" />
+    <button onclick="search_modal.showModal()">
+      <Icon name="lucide:search" class="input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 fill-current" />
     </button>
 
     <button data-toggle-theme="dark,light" data-act-class="light">
@@ -38,3 +39,14 @@ import { Icon } from "astro-icon/components";
     </button>
   </div>
 </div>
+
+<dialog id="search_modal" class="modal">
+  <div class="modal-box">
+    <Search />
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click outside to close</p>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
