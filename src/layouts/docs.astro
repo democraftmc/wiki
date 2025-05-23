@@ -35,7 +35,7 @@ const formatedHeadings = groupHeadings(headings);
   <body class="bg-base-100 max-h-screen h-screen">
     <Navbar />
     <main class="flex-grow">
-      <Navigation>
+      <Navigation doc={post}>
         <div class="flex pt-16">
            <slot />
             <ul class="hidden md:block fixed top-16 right-0 z-30 menu lg:menu-sm bg-base-100 border-r-2 border-base-300 text-base-content min-h-full w-78 md:w-64 p-4 pb-20 overflow-y-auto">
