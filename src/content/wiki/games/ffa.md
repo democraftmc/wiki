@@ -21,7 +21,7 @@ Autre kit classique et sans abilitées, ce kit possède un arc et dix flèches e
 ## 💎 Tank
 Ce kit possède un effet de lenteur, pour contrer son armure en diamant qui lui permet de tank. Pour pouvoir jouer, vous possédez aussi un *blaze rod* qui vous offre un effet temporaire de vitesse - qui contre la lenteur.
 
-## 🎯 Solider
+## 🎯 Soldier
 Ce kit est similaire au kit [Archer](#), mais il contient des armes customisées plus rapides.
 
 ## 💣 Bomber
