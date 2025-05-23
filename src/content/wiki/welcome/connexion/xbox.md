@@ -14,19 +14,19 @@ Allez dans les paramètres de votre console, puis séléctionnez "Internet". Sé
 
 Séléctionnez ensuite le résau internet que vous utilisez, puis séléctionnez "Réglages avancés"
 
-![](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox2.png)
+![Capture d'écran représantant l'étape 1](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox2.png)
 
 Séléctionnez ensuite "Paramètres DND"
 
-![](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox3.png)
+![Capture d'écran représantant l'étape 2](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox3.png)
 
 Changer la configuration DNS primaire selon l'image suivante :
 
-![](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox4.png)
+![Capture d'écran représantant l'étape 3](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox4.png)
 
 Validez, puis changez la configuration DNS secondaire celon l'image suivante
 
-![](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox5.png)
+![Capture d'écran représantant l'étape 4](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/xbox5.png)
 
 Validez ensuite vos modification et fermez les paramètres.
 

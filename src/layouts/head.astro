@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <head>
@@ -13,7 +13,7 @@ const { title, description } = Astro.props;
   <meta content={title} property="og:title" />
   <meta content={description} property="og:description" />
   <meta content="https://wiki.democraft.fr" property="og:url" />
-  <meta content="https://wiki.democraft.fr/logo.png" property="og:image" />
+  <meta content={image}property="og:image" />
   <meta content="#43B581" data-react-helmet="true" name="theme-color" />
   <ClientRouter />
   <script is:inline data-astro-rerun>

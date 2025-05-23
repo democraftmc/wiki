@@ -4,25 +4,56 @@ import "../assets/app.css";
 import Head from './head.astro';
 import Navbar from '../components/Navbar.astro';
 import Navigation from '../components/Navigation.astro'
+import { Icon } from "astro-icon/components";
+
+function groupHeadings(headings) {
+  const result = [];
+  let currentParent = null;
+
+  for (const heading of headings) {
+    if (heading.depth === 1) {
+      currentParent = { ...heading, children: [] };
+      result.push(currentParent);
+    } else if (heading.depth === 2 && currentParent) {
+      currentParent.children.push(heading);
+    }
+  }
+
+  return result;
+}
+
 
 // Extract current category from URL path
 const currentPath = Astro.url.pathname;
 const sanitizedPath = currentPath.substring(1).replace(/\/$/, ""); // Remove trailing slash
-const { post } = Astro.props;
+const { post, headings } = Astro.props;
+const formatedHeadings = groupHeadings(headings);
 ---
 
 <html lang="fr">
-  <Head title={ (post?.data?.title ?? "Page introuvable") + " - WIKI DEMOCRAFT"} description={post?.data?.description ?? "DEMOCRAFT est le premier serveur mini jeux java & bedrock !"} />
+  <Head title={ (post?.data?.title ?? "Page introuvable") + " - WIKI DEMOCRAFT"} description={post?.data?.description ?? "https://wiki.democraft.fr/logo.png"} />
   <body class="bg-base-100 max-h-screen h-screen">
     <Navbar />
     <main class="flex-grow">
       <Navigation>
-        <div class="flex pt-18">
-          <article class="prose max-w-full w-full mx-4 lg:mx-10 my-4 lg:my-8">
-            <slot />
-          </article>
-          <div class="hidden md:block w-64 min-h-full w-72 p-4">
-          </div>
+        <div class="flex pt-16">
+           <slot />
+            <ul class="hidden md:block fixed top-16 right-0 z-30 menu lg:menu-sm bg-base-100 border-r-2 border-base-300 text-base-content min-h-full w-78 md:w-64 p-4 pb-20 overflow-y-auto">
+              {headings.map((heading) => (
+                <li key={heading.slug}>
+                  <a href={"#" + heading.slug}>{heading.text}</a>
+                  {heading.children && heading.children.length > 0 && (
+                    <ul>
+                      {heading.children.map((child) => (
+                        <li key={child.slug}>
+                          <a href={"#" + child.slug}>{child.text}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
         </div>
       </Navigation>
     </main>

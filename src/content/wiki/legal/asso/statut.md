@@ -7,9 +7,8 @@ icon: home
 tags:
   - democraft
   - legal
+image: /images/studio.png
 ---
-
-<img src="https://docs.democraft.fr/img/demo-studio.png"  alt="Logo de DEMOCRAFT STUDIOS">
 
 ## ❇️ À propos de DEMOCRAFT STUDIOS
 

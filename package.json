@@ -20,6 +20,7 @@
     "daisyui": "^5.0.35",
     "remark-obsidian": "^1.8.0",
     "tailwindcss": "^4.1.7",
-    "theme-change": "^2.5.0"
+    "theme-change": "^2.5.0",
+    "unist-util-visit": "^5.0.0"
   }
 }

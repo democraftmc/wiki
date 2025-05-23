@@ -1,6 +1,7 @@
 ---
 title: 🌇 C'est quoi le lobby ?
 weight: 31
+image: /images/lobby/1.jpeg
 ---
 
 Le lobby est le monde principal de DEMOCRAFT. Sauf exceptions, c'est le monde que vous rejoignez par défaut lorsque vous rejoignez le serveur. C'est **dans celui-ci** que vous retrouverez les quêtes, les différents parcours et certains événements.

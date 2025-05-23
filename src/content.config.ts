@@ -5,6 +5,8 @@ const docsCollection = defineCollection({
     title: z.string(),
     description: z.string().default("Description"),
     draft: z.boolean().default(false),
+    icon: z.string().optional(),
+    image: z.string().optional(),
     weight: z.number().default(0),
   }),
 });

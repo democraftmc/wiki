@@ -1,11 +1,14 @@
 ---
 import { getCollection, getEntry, render } from "astro:content";
 import DocsLayout from "../layouts/docs.astro";
+import { Icon } from "astro-icon/components";
 
 // [...slug].astro
 export async function getStaticPaths() {
   const docs = await getCollection("wiki");
-  const publishedDocs = docs.filter((doc) => !doc.data.draft).filter((doc) => !doc.slug.includes('__'));
+  const publishedDocs = docs
+    .filter((doc) => !doc.data.draft)
+    .filter((doc) => !doc.slug.includes("__"));
   return publishedDocs.map((doc) => ({
     params: { slug: doc.slug, title: doc.data.title },
     props: { doc },
@@ -14,12 +17,39 @@ export async function getStaticPaths() {
 
 const { doc } = Astro.props;
 if (!doc) {
-  throw new Error('Could not find blog post 1');
+  throw new Error("Could not find blog post 1");
 }
 const { Content, headings } = await render(doc);
 ---
 
 <DocsLayout post={doc} headings={headings}>
-  <h1>{doc.data.title}</h1>
-  <Content />
+  <div class="md:pr-64 w-full">
+    {
+      doc.data.image ? (
+        <img
+          src={doc.data.image}
+          alt={doc.data.title}
+          class="relative rounded-b-xl shadow-lg h-40 w-full object-cover mb-4"
+        />
+        <h1 class="top-46 left-4 mr-4 lg:left-74 absolute flex text-2xl bg-base-100 border-2 border-base-300 py-2 px-5 rounded-lg md:text-4xl py-4 font-bold font-[Minecraft_Five]">
+          {doc.data.title}
+        </h1>
+        <article
+        data-pagefind-body
+        class="prose max-w-full mx-4 lg:mx-10 pt-12 lg:pt-4 my-4 lg:my-10">
+          <Content />
+        </article>
+      ) : (
+        <h1 class="text-2xl md:text-4xl py-4 font-bold font-[Minecraft_Five] ml-4 lg:ml-10 mt-4">
+          {doc.data.title}
+        </h1>
+        <article
+        data-pagefind-body
+        class="prose max-w-full mx-4 lg:mx-10 my-4 lg:my-8">
+          <Content />
+        </article>
+  
+      )
+    }
+  </div>
 </DocsLayout>
