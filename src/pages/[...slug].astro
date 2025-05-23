@@ -31,12 +31,12 @@ const { Content, headings } = await render(doc);
           alt={doc.data.title}
           class="relative rounded-b-xl shadow-lg h-40 w-full object-cover mb-4"
         />
-        <h1 class="top-46 left-4 mr-4 lg:left-74 absolute flex text-2xl bg-base-100 border-2 border-base-300 py-2 px-5 rounded-lg md:text-4xl py-4 font-bold font-[Minecraft_Five]">
+        <h1 class="top-46 left-4 mr-4 shadow-lg lg:left-74 absolute flex text-2xl bg-base-100 border-2 border-base-300 py-2 px-5 rounded-lg md:text-4xl py-4 font-bold font-[Minecraft_Five]">
           {doc.data.title}
         </h1>
         <article
         data-pagefind-body
-        class="prose max-w-full mx-4 lg:mx-10 pt-12 lg:pt-4 my-4 lg:my-10">
+        class="prose prose-img:rounded-md prose-img:justify-items-center max-w-full mx-4 lg:mx-10 pt-12 lg:pt-4 my-4 lg:my-10">
           <Content />
         </article>
       ) : (

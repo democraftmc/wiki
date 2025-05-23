@@ -38,7 +38,7 @@ const formatedHeadings = groupHeadings(headings);
       <Navigation post={post}>
         <div class="flex pt-16">
            <slot />
-            <ul class="hidden md:block fixed top-16 right-0 z-30 menu lg:menu-sm bg-base-100 border-r-2 border-base-300 text-base-content min-h-full w-78 md:w-64 p-4 pb-20 overflow-y-auto">
+            <ul class="hidden md:block fixed top-16 right-0 z-30 menu lg:menu-sm bg-transparent border-r-2 border-base-300 text-base-content min-h-full w-78 md:w-64 p-4 pb-20 overflow-y-auto">
               {headings.map((heading) => (
                 <li key={heading.slug}>
                   <a href={"#" + heading.slug}>{heading.text}</a>
