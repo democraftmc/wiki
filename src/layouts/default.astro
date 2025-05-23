@@ -10,8 +10,7 @@ const { title, description } = Astro.props;
   class="selection:bg-sky-200 selection:text-sky-700 transition-all duration-500 ease-in-out"
 >
   <Head title={title} description={description} />
-  <body class="bg-base-100">
-       <slot />
-    </main>
+    <body class="bg-base-100">
+      <slot />
   </body>
 </html>
