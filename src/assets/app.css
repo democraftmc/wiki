@@ -7,6 +7,43 @@
   logs: false;
 }
 
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.002 247.839);
+  --color-base-200: oklch(92% 0.006 264.531);
+  --color-base-300: oklch(87% 0.01 258.338);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: oklch(80% 0.114 19.571);
+  --color-primary-content: oklch(41% 0.159 10.272);
+  --color-secondary: oklch(90% 0.076 70.697);
+  --color-secondary-content: oklch(47% 0.137 46.201);
+  --color-accent: oklch(91% 0.096 180.426);
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(82% 0.111 230.318);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(92% 0.084 155.995);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(94% 0.129 101.54);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 2rem;
+  --radius-field: 1rem;
+  --radius-box: 2rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.3125rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
+}
+
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
