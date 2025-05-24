@@ -81,7 +81,7 @@ import Search from "astro-pagefind/components/Search";
 
 <script type="module" is:inline data-astro-rerun>
   
-  if (localStorage.getItem("theme") === "dark") {
+  if (localStorage.getItem("theme") === "demodark") {
     document.getElementById("theme_switcher").checked = true;
   }
 
@@ -96,7 +96,7 @@ import Search from "astro-pagefind/components/Search";
   document
     .getElementById("theme_switcher")
     ?.addEventListener("change", (e) => {
-      const theme = e.target.checked ? "dark" : "light";
+      const theme = e.target.checked ? "demodark" : "demolight";
       document.documentElement.setAttribute("data-theme", theme);
       localStorage.setItem("theme", theme);
     });
