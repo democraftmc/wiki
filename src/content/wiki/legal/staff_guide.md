@@ -3,7 +3,7 @@ weight: 821
 title: 💝 Staff Guidelines
 description: "Notre staff est assigné d'une mission importante : nous représenter. C'est pour cela que nous assurer qu'il respecte nos valeurs est une priorité."
 icon: stars
-draft: false
+hidden: true
 ---
 
 Voici quelques points qui forment le règlement du staff. Même si des accrochages à celui-ci peuvent être tolérés, nous vous demandons de le respecter au maximum - au risque de perdre votre grade.

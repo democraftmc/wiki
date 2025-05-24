@@ -9,6 +9,7 @@ const docs = await getCollection("wiki");
 docs.sort((a, b) => a.data.weight - b.data.weight);
 const publishedDocs = docs
   .filter((doc) => !doc.data.draft)
+  .filter((doc) => !doc.data.hidden)
   .filter((doc) => !doc.slug.includes("__"))
   .map((doc) => ({
     params: {
