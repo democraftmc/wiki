@@ -2,14 +2,13 @@
 @plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
   exclude: scrollbar;
   logs: false;
 }
 
 @plugin "daisyui/theme" {
   name: "light";
-  default: false;
+  default: true;
   prefersdark: false;
   color-scheme: "light";
   --color-base-100: oklch(98% 0.002 247.839);
