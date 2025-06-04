@@ -30,7 +30,7 @@ const { post, headings } = Astro.props;
 const formatedHeadings = groupHeadings(headings);
 ---
 
-<html lang="fr">
+<html lang="fr" data-theme="demolight">
   <Head title={ (post?.data?.title ?? "Page introuvable") + " - WIKI DEMOCRAFT"} description={post?.data?.description ?? "https://wiki.democraft.fr/logo.png"} />
   <body class="bg-base-100 max-h-screen h-screen">
     <Navbar />
