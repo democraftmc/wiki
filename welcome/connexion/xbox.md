@@ -3,12 +3,11 @@ title: 🟢 Xbox
 weight: 17
 ---
 
-> [!info]
-> **REJOIGNEZ DEMOCRAFT EN UN CLIC !**
+> [!info] REJOIGNEZ DEMOCRAFT EN UN CLIC !
 > 
 > DEMOCRAFT est maintenant compatible avec le [lien magique](../magik/), qui vous permet de rejoindre DEMOCRAFT sans aucune modification sur votre console !
 
-### **Se connecter sur Xbox**
+### Se connecter sur Xbox
 
 Allez dans les paramètres de votre console, puis séléctionnez "Internet". Séléctionez ensuite "Paramètres Internet"
 

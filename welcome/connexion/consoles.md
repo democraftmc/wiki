@@ -2,11 +2,9 @@
 title: 🎮 Étape finale Consoles
 weight: 20
 ---
-
-
-### **Dernière étape sur Console**
-
 Pour toutes les consoles, vous avez une dernière étape avant de pouvoir jouer sur DEMOCRAFT : ajouter le serveur !
+## Dernière étape sur Console
+
 Pour cela, ouvrez d'abord Minecraft sur votre console. Cliquez ensuite sur "Serveurs" et rejoignez l'un des 6 serveurs dans la liste (n'importe lequel)
 
 ![Capture d'écran représantant l'étape 1](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/console1.png)

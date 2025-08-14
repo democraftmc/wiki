@@ -3,7 +3,7 @@ title: ☕ Java Edition
 weight: 11
 ---
 
-### **Se connecter sur Java Edition**
+### Se connecter sur Java Edition
 
 Tout d'abord, lancez Minecraft: Java Edition.
 

@@ -5,6 +5,8 @@ weight: 15
 
 _Petit conseil : Vous pouvez ajouter le serveur automagiquement à votre jeu avec_ [_un simple clic_](minecraft://democraft.fr?addExternalServer=DEMOCRAFT|bedrock.democraft.fr:19132)_._
 
+## Comment se connecter ?
+
 Pour vous connecter à DEMOCRAFT sur Bedrock Edition, il faut d'abord ajouter notre serveur.
 <figure><img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/bedrock1.png" alt=""><figcaption></figcaption></figure>
 

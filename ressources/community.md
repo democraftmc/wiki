@@ -5,7 +5,6 @@ description: DEMOCRAFT est un serveur qui s'est construit sur la communauté, et
 icon: home
 draft: true
 ---
-
 > **DEMOCRAFT ne sera jamais un gros serveur comme Hypixel ou Craftok.** Nous avons fait le choix de ne pas sortir de notre concept
 > et de proposer une infrastructure crossplay (java & bedrock) à tous. Mais pour le moment, celle si nous est tous sauf rentable.
 > C'est donc pour cela que nos valeurs nous sont si importantes, car c'est ce qui fait vivre le serveur.[^1]

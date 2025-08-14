@@ -3,7 +3,6 @@ title: 📱 DEMOPHONE
 weight: 32
 image: /images/phone/inventaire.png
 ---
-
 Le **DEMOPHONE** est l'objet le plus important de DEMOCRAFT : il vous permet de vous déplacer entre les différents serveurs, voir vos amis, gérer votre groupe, utiliser des cosmétiques, voir vos statistiques, nos réseaux... Bref, l'outil parfait.
 
 ## 🧐  Comment l'utiliser ?

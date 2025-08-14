@@ -3,12 +3,11 @@ title: 🔵 Playstation
 weight: 18
 ---
 
-> [!info]
-> **REJOIGNEZ DEMOCRAFT EN UN CLIC !**
+> [!info] REJOIGNEZ DEMOCRAFT EN UN CLIC !
 > 
 > DEMOCRAFT est maintenant compatible avec le [lien magique](../magik/), qui vous permet de rejoindre DEMOCRAFT sans aucune modification sur votre console !
 
-### **Se connecter sur Playstation 4/5**
+## Se connecter sur Playstation 4/5
 
 Allez dans les paramètres de votre console, puis sélectionnez "Internet". Sélectionnez ensuite "Modifier la connexion internet"
 

@@ -3,12 +3,11 @@ title: 🔴 Switch
 weight: 19
 ---
 
-> [!info]
-> **REJOIGNEZ DEMOCRAFT EN UN CLIC !**
+> [!info] REJOIGNEZ DEMOCRAFT EN UN CLIC !
 > 
 > DEMOCRAFT est maintenant compatible avec le [lien magique](../magik/), qui vous permet de rejoindre DEMOCRAFT sans aucune modification sur votre console !
 
-### **Se connecter sur Switch**
+## Se connecter sur Switch
 
 Allez dans les paramètres de votre console, puis sélectionnez "Internet". Sélectionnez ensuite "Paramètres de la connexion internet"
 

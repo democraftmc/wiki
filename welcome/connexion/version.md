@@ -3,14 +3,11 @@ title: 📦 Quelle est votre version ?
 weight: 10
 image: https://us-east-1.tixte.net/uploads/cdn.democraft.fr/pc0.png
 ---
-
-## **Sur quelle version jouez vous ?**
-
 Avant de pouvoir vous connecter au serveur, il faut savoir sur quelle version vous jouez ! Vous trouverez sur cette page un peu d'aide pour vous orienter
 
 _Si vous jouez sur console ou mobile, choisissez directement votre platforme dans le menu à gauche._
 
-### Connaître votre version du jeu
+## Connaître votre version du jeu
 
 ![COllage avec les deux versions du jeu superposés](https://us-east-1.tixte.net/uploads/cdn.democraft.fr/pc0.png)
 

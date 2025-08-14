@@ -1,6 +1,7 @@
 ---
 title: 🪐 Mondes VS Jeux
 weight: 33
+draft: true
 ---
 
 ## 🎮 Mini Jeux
