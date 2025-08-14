@@ -1,0 +1,35 @@
+name: Update Private Submodules
+
+on:
+  workflow_dispatch: # Trigger manually
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.GH_PAT }} # Use your personal access token
+          persist-credentials: true
+
+      - name: Set Git credentials
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global url."https://${{ secrets.GH_PAT }}@github.com/".insteadOf "https://github.com/"
+
+      - name: Update all submodules
+        run: |
+          git submodule update --remote --recursive
+
+      - name: Commit and push changes if needed
+        run: |
+          if git status --porcelain | grep '^ M'; then
+            git commit -am "chore: update submodules"
+            git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to commit."
+          fi
