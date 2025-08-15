@@ -1,5 +1,6 @@
 ---
 title: Github Readme File
+draft: true
 ---
 
 # DEMOCRAFT : Wiki Edition
