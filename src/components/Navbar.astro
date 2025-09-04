@@ -11,26 +11,17 @@ import Search from "astro-pagefind/components/Search";
     >
       <Icon name="lucide:menu" class="h-10 w-10 px-2 fill-current" />
     </label>
-    <a
-      href="/"
-      class="hidden md:flex text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2"
-    >
-      <div class="indicator">
-  <span class="indicator-item badge badge-primary">WIKI <Icon name="lucide:pencil-ruler" /></span>
-  <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/pixel-title.png" class="h-10 w-auto"/>
-</div>
+    <a href="/" class="text-xs pixel font-bold flex items-center">
+        <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/logo.png" class="max-sm:ml-2 h-10 w-10 md:h-13 md:w-13 rounded-lg" />
+        <div>
+            <span class="md:block ml-1 text-2xl font-[Minecraft_Five]">DEMOCRAFT</span>
+            <span class="badge badge-sm badge-primary ml-2">
+              <Icon name="lucide:pencil-ruler" />
+              WIKI
+            </span>
+        </div>
     </a>
   </div>
-
-  <a
-    href="/"
-    class="navbar-center flex md:hidden text-lg md:text-2xl ml-3 font-bold flex-inline items-center gap-2"
-  >
-<div class="indicator">
-  <span class="indicator-item indicator-bottom indicator-center badge badge-primary badge-sm">WIKI <Icon name="lucide:pencil-ruler" /></span>
-  <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/pixel-title.png" class="h-8 w-auto"/>
-</div>
- </a>
 
   <div class="navbar-end">
     <button onclick="search_modal.showModal()">
