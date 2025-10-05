@@ -23,5 +23,13 @@ icon: home
 16. Dans la barrière d'acacia qui délimite notre ville.
 17. Sous l’eau mais sur la pierre
 18. Celui-ci pourrait être exposé !
-19.
-20.
+19. Une anomalie sur la cote, ces grottes sont elles humaines ?
+20. La ou les briques se chevauchent
+21. Oh, grand vaati !
+22. Il était derrière vous depuis le début
+23. DEMO est l'amis des animaux
+24. Mais il aime également observer des plantes
+25. /spawn.
+26. Il vous attend à la fin d'un pont.
+27. Il garde un oeuil sur l'horizon
+28. Il se cache tel un hobbit
