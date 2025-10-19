@@ -19,6 +19,7 @@ icon: balance
 - La diffusion d’informations privées ou de photos sans l’accord explicite de la personne concernée est interdite.  
 - La publicité en messages privés est interdite. Les incitations à consulter un contenu publicitaire seront sanctionnées.  
 - Les commandes doivent être effectuées dans le salon **#🧷・commandes**.  
+- Merci de parler dans un français correct, ou d'utiliser un correcteur dans le cas où vous auriez des problèmes/incapacités avec la langue française.
 
 ## 🔊 Dans les salons vocaux / le voice chat
 - Les nuisances en vocal (spam, screamers, musique trop forte) sont interdites.  
