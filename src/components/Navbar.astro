@@ -9,37 +9,38 @@ import Search from "astro-pagefind/components/Search";
       for="nav-drawer"
       class="lg:hidden btn btn-soft btn-primary px-1 drawer-button h-10 w-10"
     >
-      <Icon name="lucide:menu" class="h-10 w-10 px-1 fill-current" />
+      <Icon name="lucide:menu" class="h-10 w-10 px-0.5 fill-current" />
     </label>
     <a href="/" class="text-xs pixel font-bold flex items-center">
         <img src="https://us-east-1.tixte.net/uploads/cdn.democraft.fr/logo.png" class="max-sm:ml-2 h-10 w-10 md:h-13 md:w-13 rounded-lg" />
-        <div>
-            <span class="md:block ml-1 text-2xl font-[Minecraft_Five]">DEMOCRAFT</span>
-            <span class="badge badge-xs md:badge-sm badge-primary ml-2">
-              <Icon name="lucide:pencil-ruler" />
-              WIKI
-            </span>
-        </div>
     </a>
   </div>
 
+  <div class="navbar-center">
+            <span class="md:block ml-1 text-2xl font-bold font-[Minecraft_Five]">DEMOCRAFT</span>
+            <!--span class="badge badge-xs md:badge-sm badge-primary ml-2">
+              <Icon name="lucide:pencil-ruler" />
+              WIKI
+            </span-->
+        </div>
+
   <div class="navbar-end">
-    <button onclick="search_modal.showModal()">
+    <button class="mr-2 btn btn-soft px-2 py-0 bg-base-100 border-2 border-base-300 h-10 w-10 md:h-13 md:w-13" onclick="search_modal.showModal()">
       <Icon
         name="lucide:search"
-        class="input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 fill-current"
+        class="h-6 w-6 fill-current"
       />
     </button>
 
-    <label class="swap swap-rotate">
+    <label class="swap swap-rotate btn btn-soft px-2 py-0 bg-base-100 border-2 border-base-300 h-10 w-10 md:h-13 md:w-13">
       <input type="checkbox" id="theme_switcher"/>
       <Icon
         name="lucide:sun"
-        class="swap-on input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
+        class="swap-on h-6 w-6 fill-current"
       />
       <Icon
         name="lucide:moon"
-        class="swap-off input input-bordered h-8 md:h-10 w-8 md:w-10 px-2 mx-2 fill-current"
+        class="swap-off h-6 w-6 fill-current"
       />
     </label>
   </div>
