@@ -1,4 +1,0 @@
-[submodule "src/content/wiki"]
-	path = src/content/wiki
-	url = https://github.com/democraftmc/wiki.git
-	branch = markdown/prod
