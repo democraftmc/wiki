@@ -1,7 +1,8 @@
 name: Update Private Submodules
 
 on:
-  workflow_dispatch: # Trigger manually
+  push:
+  workflow_dispatch:
 
 jobs:
   update-submodules:
@@ -11,9 +12,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          ref: 'astro/prod'
           token: ${{ secrets.GH_PAT }} # Use your personal access token
           persist-credentials: true
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: 'markdown/prod'
+          token: ${{ secrets.GH_PAT }}
+          persist-credentials: true
+          path: 'src/content/wiki'
 
       - name: Set Git credentials
         run: |
