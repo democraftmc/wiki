@@ -1,13 +1,9 @@
-name: 📦 Deploy to GitHub Pages
+name: 📦 Build 
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
@@ -16,11 +12,20 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true
+          ref: 'astro/prod'
+          persist-credentials: true
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: 'markdown/prod'
+          path: 'src/content/wiki'
+
       - name: Install, build, and upload your site output
         uses: withastro/action@v4
         with:
