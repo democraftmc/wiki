@@ -172,7 +172,7 @@
 
 
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'MinecraftFive';
   src: url('/fonts/MinecraftFive.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -180,9 +180,13 @@
 }
 
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'MinecraftFive';
   src: url('/fonts/MinecraftFiveBold.otf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'MinecraftFive', sans-serif;
 }
