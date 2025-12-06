@@ -2,6 +2,9 @@ name: 📦 Build
 
 on:
   push:
+    branches:
+      - astro/prod
+      - markdown/prod
   workflow_dispatch:
 
 permissions:
